@@ -4,14 +4,11 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.support.v4.app.DialogFragment;
 
 import sensors.francesc.dam2.iesebre.com.stripeapp.R;
 
-/**
- * Created by francesc on 06/02/16.
- */
-public class ErrorDialogFragment {
-
+public class ErrorDialogFragment extends DialogFragment {
     public static ErrorDialogFragment newInstance(int titleId, String message) {
         ErrorDialogFragment fragment = new ErrorDialogFragment();
 

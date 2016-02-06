@@ -1,6 +1,7 @@
 package sensors.francesc.dam2.iesebre.com.stripeapp.fragment;
 
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,12 +9,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import sensors.francesc.dam2.iesebre.com.stripeapp.PaymentForm;
 import sensors.francesc.dam2.iesebre.com.stripeapp.R;
+import sensors.francesc.dam2.iesebre.com.stripeapp.MainActivity;
 
-/**
- * Created by francesc on 06/02/16.
- */
-public class PaymentFormFragment {
+public class PaymentFormFragment extends Fragment implements PaymentForm {
 
     Button saveButton;
     EditText cardNumber;
@@ -75,7 +75,7 @@ public class PaymentFormFragment {
     }
 
     public void saveForm(View button) {
-        ((PaymentActivity)getActivity()).saveCreditCard(this);
+        ((MainActivity)getActivity()).saveCreditCard(this);
     }
 
     private Integer getInteger(Spinner spinner) {

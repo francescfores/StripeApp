@@ -3,12 +3,9 @@ package sensors.francesc.dam2.iesebre.com.stripeapp.dialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.os.Bundle;
+import android.support.v4.app.DialogFragment;
 
-/**
- * Created by francesc on 06/02/16.
- */
-public class ProgressDialogFragment {
-
+public class ProgressDialogFragment extends DialogFragment {
     public static ProgressDialogFragment newInstance(int msgId) {
         ProgressDialogFragment fragment = new ProgressDialogFragment();
 

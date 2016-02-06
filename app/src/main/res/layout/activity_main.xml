@@ -31,4 +31,29 @@
         android:layout_margin="@dimen/fab_margin"
         android:src="@android:drawable/ic_dialog_email" />
 
+    <TextView android:id="@+id/payment_form_title"
+        android:text="@string/addPayment"
+        android:layout_alignParentTop="true"
+        style="@style/Header"
+        />
+
+    <fragment android:id="@+id/payment_form"
+        android:layout_below="@id/payment_form_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        class="sensors.francesc.dam2.iesebre.com.stripeapp.fragment.PaymentFormFragment"/>
+
+    <TextView android:id="@+id/token_list_title"
+        android:text="@string/paymentMethods"
+        android:layout_below="@id/payment_form"
+        android:layout_marginTop="25dp"
+        style="@style/Header"
+        />
+
+    <fragment android:id="@+id/token_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/token_list_title"
+        class="sensors.francesc.dam2.iesebre.com.stripeapp.fragment.TokenListFragment"/>
+
 </android.support.design.widget.CoordinatorLayout>
